@@ -4,3 +4,4 @@ resource "random_string" "suffix" {
     special = false
 }
 # Some comment.
+# some comment2
