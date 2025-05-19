@@ -12,7 +12,7 @@ enabled          = false
 
 ### Collections
 regions = ["westus", "eastus", "westus"] #like python list/JS array
-region_instance_countt = {               # like python dict
+region_instance_count = {                # like python dict
   "westus" = 4
   "eastus" = 8
 }

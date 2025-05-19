@@ -36,5 +36,5 @@ output "primary_region" {
   value = var.regions[0] # like python list/JS array
 }
 output "primary_region_instance" {
-  value = var.region_instance_count["westus"]
+  value = var.region_instance_count["eastus"]
 }

@@ -31,8 +31,8 @@ variable "regions" {
   type = list(any) # like python list/JS array
 }
 variable "region_instance_count" {
-  type = map(string) # like python dictionary
+  type = map(any) # like python dictionary
 }
 variable "region_set" {
-  type = set(string)
+  type = set(string) # like python set
 }
