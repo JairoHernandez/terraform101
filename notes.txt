@@ -1,0 +1,18 @@
+### 35. Input Variable Value Selecion Order
+
+It's bettter to leave all of these blank than to have assigned a value to more than one method here 
+because it can cause unsuspecting outage with your code, so you have to then go hunt down the 
+pesky variable has been assigned more than once.
+
+Order in wchi TF applies variables:
+
+    TF_VAR environment variables (most secure, but poses most risk for malconfifugratio, so use sparingly)
+        Use for secrets or values that need to introduced programmatically or dynamically.
+    default terraform.tfvars
+        Use for application wide settings that do not need to change for each environment.
+        Create a .tfvars file for each environment dev test, prod stage, perf test, load test, whatever you name it.
+        If you're going to provision it, create a .tfvars file for it and call it a day.
+    *.auto.tfvars (where * can be something.something.something)
+    -var cli option
+    -var-file cli option
+    old fashion manual input(which hopefully is never used)
