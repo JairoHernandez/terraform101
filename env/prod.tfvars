@@ -6,4 +6,8 @@
 # Jairos-MBP:terraform101 jhern$ terraform apply -var-file ./env/prod.tfvars
 # Recommended to use this file whne separating out environments:
 # dev, staging, production, etc.
-environment_name = "prod"
+environment_name      = "prod"
+instance_count        = 4
+enabled               = false
+regions               = ["westus", "eastus"]
+region_intance_countt = {}

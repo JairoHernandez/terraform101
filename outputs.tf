@@ -1,5 +1,6 @@
 # The output can be displayed on screen when running terraform apply.
 # Outputs can be assigned input variables or local variables values.
+# The name of the output can be anything and does not have to match the variable name.
 output "application_name" {
   value = var.application_name
 }
@@ -28,4 +29,12 @@ output "suffix" {
 output "api_key" {
   value     = "${var.api_key}bar"
   sensitive = true
+}
+
+#### Collection types
+output "primary_region" {
+  value = var.regions[0] # like python list/JS array
+}
+output "primary_region_instance" {
+  value = var.region_instance_count["westus"]
 }
