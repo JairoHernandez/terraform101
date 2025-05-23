@@ -32,9 +32,13 @@ output "api_key" {
 }
 
 #### Collection types
+
 output "primary_region" {
-  value = var.regions[0] # like python list/JS array
+  value = var.regions[0] # list: like python list/JS array
 }
 output "primary_region_instance" {
-  value = var.region_instance_count["eastus"]
+  value = var.region_instance_count[var.regions[0]] # map: like python dict
+}
+output "kind" {
+  value = var.sku_settings.tier
 }
