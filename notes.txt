@@ -16,3 +16,18 @@ Order in wchi TF applies variables:
     -var cli option
     -var-file cli option
     old fashion manual input(which hopefully is never used)
+
+### 38. Adding comments
+
+You can use 
+// something
+# something
+/*
+    something
+*/
+
+### 39. Using Workspaces
+
+terraform workspace new dev (puts you in the dev workspace automatically. Also creates root folder terraform.tfstate.d)
+terraform workspace list 
+terraform workspace select default
